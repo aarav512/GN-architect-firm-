@@ -2,11 +2,10 @@
 
 @theme {
   --color-ivory: #f5f1ea;
-  --color-charcoal: #181818;
-  --color-bronze: #8b6b4a;
   --color-ink: #111111;
+  --color-bronze: #8b6b4a;
   --color-stone: #a6a29b;
-  --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+  --font-serif: "Fraunces", "Times New Roman", serif;
   --font-sans: "Inter", "Helvetica Neue", sans-serif;
 }
 
@@ -35,164 +34,120 @@ body.has-cursor button {
   color: #f5f1ea;
 }
 
-.serif {
-  font-family: var(--font-serif);
-}
+.serif { font-family: var(--font-serif); }
 
 .kicker {
   font-size: 11px;
-  letter-spacing: 0.28em;
+  letter-spacing: 0.26em;
   text-transform: uppercase;
   font-weight: 500;
 }
 
-.nav-link {
-  position: relative;
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
+.sheet {
+  background-image:
+    linear-gradient(to right, rgba(17, 17, 17, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 17, 17, 0.08) 1px, transparent 1px);
+  background-size: calc(100% / 12) 100%, 100% 72px;
+  background-position: 0 0, 0 0;
 }
+
+.nav-link { position: relative; }
 
 .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: -3px;
   width: 100%;
   height: 1px;
   background: currentColor;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .nav-link:hover::after,
-.nav-link:focus-visible::after {
-  transform: scaleX(1);
+.nav-link:focus-visible::after { transform: scaleX(1); }
+
+.crop {
+  overflow: hidden;
 }
 
-#nav.is-light {
-  color: #f5f1ea;
+.crop img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.06);
 }
 
-.hero-photo {
-  will-change: transform;
+.plate img {
+  transition: transform 1.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.sheet-grid {
-  background-image:
-    linear-gradient(to right, rgba(245, 241, 234, 0.28) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(245, 241, 234, 0.28) 1px, transparent 1px);
-  background-size: 10% 12.5%;
+.plate:hover img { transform: scale(1.1); }
+
+.plate-meta {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.5s ease;
+}
+
+.plate:hover .plate-meta,
+.plate:focus-within .plate-meta {
+  max-height: 8rem;
+  opacity: 1;
 }
 
 .draw,
 .hero-line {
   fill: none;
-  stroke: rgba(245, 241, 234, 0.85);
-  stroke-width: 1;
+  stroke: #111111;
+  stroke-width: 1.15;
   vector-effect: non-scaling-stroke;
 }
 
-.hero-line {
-  stroke: rgba(245, 241, 234, 0.7);
-}
+.hero-line { stroke: rgba(245, 241, 234, 0.75); }
 
-.project {
-  background: #111111;
-}
-
-.project img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: scale(1.04);
-  transition: transform 1.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.project:hover img {
-  transform: scale(1.08);
-}
-
-.plaque {
-  background: #f5f1ea;
-  color: #111111;
-  transform: translateY(16px);
-  opacity: 0;
-  transition: opacity 0.6s ease, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.project:hover .plaque,
-.project:focus-within .plaque {
-  opacity: 1;
-  transform: none;
-}
-
-.material-frame img {
-  transition: opacity 0.7s ease;
-}
-
-.mat-btn.is-on {
-  color: #111111;
-}
-
-.mat-btn.is-on span {
-  transform: scaleX(1);
-}
-
-.mat-btn span {
-  display: block;
-  height: 1px;
-  width: 100%;
-  background: #8b6b4a;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-}
+.mat-name.is-on { color: #111111; }
 
 .cursor {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0 auto auto 0;
   z-index: 80;
   pointer-events: none;
 }
 
 .cursor-ring {
   position: absolute;
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
   border: 1px solid #8b6b4a;
   border-radius: 999px;
   transform: translate(-50%, -50%);
-  transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1), height 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   display: grid;
   place-items: center;
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1), height 0.4s cubic-bezier(0.22, 1, 0.36, 1), background 0.4s ease;
 }
 
 .cursor-label {
-  font-family: var(--font-sans);
   font-size: 9px;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+  text-align: center;
+  width: 74px;
+  line-height: 1.25;
   color: #8b6b4a;
   opacity: 0;
-  width: 72px;
-  text-align: center;
-  line-height: 1.3;
 }
 
-.cursor.is-view .cursor-ring {
-  width: 108px;
-  height: 108px;
-  background: rgba(245, 241, 234, 0.92);
+.cursor.is-hot .cursor-ring {
+  width: 104px;
+  height: 104px;
+  background: rgba(245, 241, 234, 0.94);
 }
 
-.cursor.is-view .cursor-label {
-  opacity: 1;
-}
+.cursor.is-hot .cursor-label { opacity: 1; }
 
 #menu {
   visibility: hidden;
@@ -211,82 +166,27 @@ body.has-cursor button {
   outline-offset: 4px;
 }
 
-#hero-frame img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media (min-width: 1024px) {
-  #hero-frame {
-    height: 100svh;
-    min-height: 100svh;
-  }
-}
-
 @media (max-width: 1023px) {
-  #hero {
-    position: relative;
-    display: block;
-    height: 100svh;
-    overflow: hidden;
-  }
-
-  #hero h1 {
-    font-size: clamp(2.7rem, 11vw, 4rem);
-  }
-
-  #hero-frame {
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    min-height: 100%;
-  }
-
-  #hero-frame img {
-    position: absolute;
-    inset: 0;
-  }
-
-  #hero > div:first-child {
-    position: absolute;
-    right: auto;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    width: min(92%, 26rem);
-    max-height: 42svh;
-    min-height: 0;
-    overflow: hidden;
-    background: #f5f1ea;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-  }
-
   .work-track {
     display: block !important;
     width: 100% !important;
-    height: auto !important;
     transform: none !important;
   }
 
-  .project {
+  .plate {
     width: 100% !important;
-    height: 100svh;
+    height: auto !important;
+    min-height: 100svh;
   }
 
-  .plaque {
+  .plate-meta {
+    max-height: 8rem;
     opacity: 1;
-    transform: none;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .project img,
-  .plaque,
-  .mat-btn span,
-  .nav-link::after {
-    transition: none !important;
-  }
+  .plate img,
+  .plate-meta,
+  .nav-link::after { transition: none !important; }
 }

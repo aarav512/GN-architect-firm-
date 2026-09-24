@@ -1,30 +1,25 @@
 # GN Architects
 
-A cinematic homepage for **GN Architects** (formerly Guru Nanak Architects), a Delhi studio. Editorial layout, architectural line work, and slow scroll — built as a single handcrafted page.
+Editorial homepage for GN Architects, formerly Guru Nanak Architects, New Delhi. Established 2014.
 
-## Run locally
+Project photographs on the page are marked placeholders. No street address, phone, or email is shown, because none was supplied for this site.
+
+## Local
 
 ```bash
 npm install
 npm run dev
 ```
 
-The dev server listens on [http://127.0.0.1:4317](http://127.0.0.1:4317).
+Open http://127.0.0.1:4317
 
-```bash
-npm run build
-npm run preview
-```
+## Cloudflare Pages
 
-## Stack
+| Setting | Value |
+| --- | --- |
+| Build command | `npm run build` |
+| Build output directory | `dist` |
 
-HTML, Tailwind CSS, JavaScript, GSAP (ScrollTrigger, Draggable), and Lenis. No React.
+`npm run build` writes a compiled `dist/index.html` with bundled CSS and JavaScript. It also copies that build to the repository root so a static publish of the root still loads styles, scripts, fonts, and images.
 
-## What you can do
-
-- Move across the hero residence — the photograph shifts slightly.
-- Scroll through the sheet that draws itself, then becomes Nilaya House.
-- Move through the horizontal project gallery (stacked full-height frames on a phone).
-- Open a practice sheet, follow the process, and hover a material to change the room.
-- Drag the client quotes. Hover the Delhi pin for the studio address.
-- Send the consultation form — it checks the fields in the browser.
+Framework preset: Vite. Do not set the output directory to the repository root if a build command is configured — use `dist`.
