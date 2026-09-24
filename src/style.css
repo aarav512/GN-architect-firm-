@@ -1,12 +1,53 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("./fonts/InstrumentSerif-Regular.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("./fonts/InstrumentSerif-Italic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("./fonts/Switzer-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("./fonts/Switzer-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("./fonts/Switzer-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --color-ivory: #f5f1ea;
   --color-ink: #111111;
   --color-bronze: #8b6b4a;
   --color-stone: #a6a29b;
-  --font-serif: "Fraunces", "Times New Roman", serif;
-  --font-sans: "Inter", "Helvetica Neue", sans-serif;
+  --color-muted: #444444;
+  --font-serif: "Instrument Serif", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-sans: "Switzer", "Helvetica Neue", "Arial", sans-serif;
 }
 
 html {
@@ -18,8 +59,9 @@ body {
   margin: 0;
   background: #f5f1ea;
   color: #111111;
-  font-family: var(--font-sans);
+  font-family: "Switzer", "Helvetica Neue", sans-serif;
   font-weight: 400;
+  font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
 
@@ -34,13 +76,167 @@ body.has-cursor button {
   color: #f5f1ea;
 }
 
-.serif { font-family: var(--font-serif); }
+.serif {
+  font-family: "Instrument Serif", "Iowan Old Style", serif;
+  font-weight: 300;
+}
 
-.kicker {
-  font-size: 11px;
-  letter-spacing: 0.26em;
+.kicker,
+.nav-link,
+.hero-label,
+.section-label,
+.project-meta,
+.pill {
+  font-family: "Switzer", "Helvetica Neue", sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
+}
+
+.kicker,
+.section-label {
+  font-size: 11px;
+  letter-spacing: 0.28em;
   font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.hero-label {
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  opacity: 0.65;
+  margin: 0 0 32px;
+}
+
+.hero-title {
+  margin: 0;
+  max-width: 9em;
+  font-family: "Instrument Serif", serif;
+  font-weight: 300;
+  font-size: clamp(54px, 7.2vw, 112px);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  text-align: left;
+}
+
+.hero-lead {
+  max-width: 420px;
+  margin: 40px 0 56px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.85;
+  color: #444444;
+}
+
+.section-title,
+.stage h3,
+.colophon-title {
+  font-family: "Instrument Serif", serif;
+  font-weight: 300;
+  font-size: clamp(42px, 4.6vw, 72px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 0 0 40px;
+}
+
+.pull {
+  max-width: 70%;
+  margin: 0;
+  font-family: "Instrument Serif", serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(48px, 5.4vw, 84px);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.project-title {
+  margin: 10px 0 10px;
+  font-family: "Instrument Serif", serif;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.project-meta {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: 0.16em;
+}
+
+.body,
+.stage p,
+#mat-note {
+  max-width: 560px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.9;
+  color: #444444;
+}
+
+.nav-link {
+  font-size: 12px;
+  letter-spacing: 0.3em;
+}
+
+.site-nav {
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 96px;
+}
+
+.nav-links {
+  gap: 40px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 28px;
+  border: 1px solid #111111;
+  border-radius: 999px;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-decoration: none;
+}
+
+.section {
+  padding: 140px 96px;
+}
+
+.rule {
+  height: 1px;
+  border: 0;
+  background: #a6a29b;
+  margin: 0;
+}
+
+@media (max-width: 1023px) {
+  .site-nav,
+  .section,
+  .hero {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .section { padding-top: 96px; padding-bottom: 96px; }
+  .hero-title { font-size: 56px; line-height: 0.95; letter-spacing: -0.03em; }
+  .section-title,
+  .stage h3 { font-size: 42px; }
+  .body,
+  .hero-lead,
+  .stage p { font-size: 16px; }
+  .pull { max-width: 100%; font-size: 48px; }
+  .menu-link { margin-bottom: 24px; }
+}
+
+@media (min-width: 700px) and (max-width: 1023px) {
+  .site-nav,
+  .section { padding-left: 64px; padding-right: 64px; }
+  .section { padding-top: 120px; padding-bottom: 120px; }
 }
 
 .sheet {
@@ -183,6 +379,63 @@ body.has-cursor button {
     max-height: 8rem;
     opacity: 1;
   }
+}
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: block;
+  padding: 120px 0 80px 96px;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  width: 42%;
+  padding-top: 7vh;
+}
+
+.hero-frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  margin: 0;
+}
+
+.hero-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.plate {
+  width: calc(100vw - 24px);
+  margin-right: 120px;
+}
+
+.menu-link {
+  display: block;
+  font-family: "Instrument Serif", serif;
+  font-weight: 300;
+  font-size: 56px;
+  line-height: 1;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1023px) {
+  .hero { padding: 96px 24px 0; }
+  .hero-copy { width: 100%; padding-top: 72px; }
+  .hero-frame {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: calc(100% + 48px);
+    height: 68svh;
+    margin: 32px -24px 0;
+  }
+  .plate { width: 100%; margin-right: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -6,26 +6,21 @@
     <title>GN Architects — New Delhi</title>
     <meta name="description" content="GN Architects, formerly Guru Nanak Architects, is a New Delhi studio for architecture and interiors. Established 2014." />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   </head>
   <body class="sheet text-ink">
     <div id="cursor" class="cursor" aria-hidden="true"><div class="cursor-ring"><span class="cursor-label">Explore</span></div></div>
     <header class="fixed inset-x-0 top-0 z-40">
-      <div class="flex items-start justify-between px-4 py-4 md:px-8">
-        <a href="#hero" data-scroll class="leading-tight">
-          <span class="serif block text-2xl tracking-wide">GN</span>
-          <span class="kicker text-stone">Architects</span>
+      <div class="site-nav">
+        <a href="#hero" data-scroll class="leading-none">
+          <span class="serif block text-[28px]">GN</span>
         </a>
-        <nav class="hidden gap-8 pt-2 lg:flex" aria-label="Primary">
+        <nav class="nav-links hidden lg:flex" aria-label="Primary">
           <a class="nav-link kicker" href="#work" data-scroll>Work</a>
           <a class="nav-link kicker" href="#studio" data-scroll>Studio</a>
           <a class="nav-link kicker" href="#materials" data-scroll>Materials</a>
           <a class="nav-link kicker" href="#process" data-scroll>Process</a>
         </nav>
-        <p class="kicker hidden pt-2 text-stone md:block">New Delhi · Est. 2014</p>
-        <button id="menu-btn" class="pt-1 lg:hidden" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <button id="menu-btn" class="lg:hidden" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
           <span class="mb-1.5 block h-px w-7 bg-ink"></span>
           <span class="block h-px w-7 bg-ink"></span>
         </button>
@@ -34,26 +29,25 @@
     <div id="menu" class="fixed inset-0 z-30 flex flex-col bg-ivory px-6 py-8 transition duration-500">
       <p class="kicker text-stone">Index</p>
       <nav class="mt-16 flex flex-1 flex-col justify-center" aria-label="Mobile">
-        <a class="serif text-6xl leading-none" href="#work" data-scroll>Work</a>
-        <a class="serif mt-3 text-6xl leading-none" href="#studio" data-scroll>Studio</a>
-        <a class="serif mt-3 text-6xl leading-none" href="#materials" data-scroll>Materials</a>
-        <a class="serif mt-3 text-6xl leading-none" href="#process" data-scroll>Process</a>
+        <a class="menu-link" href="#work" data-scroll>Work</a>
+        <a class="menu-link" href="#studio" data-scroll>Studio</a>
+        <a class="menu-link" href="#materials" data-scroll>Materials</a>
+        <a class="menu-link" href="#process" data-scroll>Process</a>
       </nav>
       <p class="kicker text-stone">New Delhi · Est. 2014</p>
     </div>
     <main>
-      <section id="hero" class="grid min-h-[100svh] items-end gap-6 px-4 pb-6 pt-24 md:px-8 lg:grid-cols-12 lg:pt-28">
-        <div class="lg:col-span-6 lg:pb-6">
-          <p class="fade kicker text-stone">New Delhi · Est. 2014</p>
-          <h1 class="serif mt-5 text-[clamp(3.4rem,7.2vw,100px)] font-medium leading-[0.86] tracking-[-0.04em]">
-            <span class="mask block overflow-hidden"><span class="block">Spaces</span></span>
-            <span class="mask block overflow-hidden"><span class="block">that feel</span></span>
-            <span class="mask block overflow-hidden"><span class="block italic text-bronze">timeless.</span></span>
+      <section id="hero" class="hero">
+        <div class="hero-copy">
+          <p class="fade hero-label">New Delhi · Est. 2014</p>
+          <h1 class="hero-title">
+            <span class="mask block overflow-hidden"><span class="block">Spaces that</span></span>
+            <span class="mask block overflow-hidden"><span class="block">feel timeless.</span></span>
           </h1>
-          <p class="fade mt-8 max-w-[32ch] text-[15px] font-light leading-relaxed text-ink/75">GN Architects, formerly Guru Nanak Architects, practices architecture and interiors in New Delhi. The work is concerned with light, material, and the long life of a room.</p>
-          <a class="fade kicker mt-8 inline-flex items-center gap-4" href="#work" data-scroll data-cursor="Explore"><span class="block h-px w-10 bg-bronze"></span>View the work</a>
+          <p class="fade hero-lead">GN Architects, formerly Guru Nanak Architects, practices architecture and interiors in New Delhi. The work is concerned with light, material, and the long life of a room.</p>
+          <a class="fade pill" href="#work" data-scroll data-cursor="Explore">View the work</a>
         </div>
-        <figure id="hero-frame" class="crop relative h-[58svh] lg:col-span-6 lg:-ml-10 lg:h-[calc(100svh-8rem)]" data-cursor="Explore">
+        <figure id="hero-frame" class="hero-frame crop" data-cursor="Explore">
           <img id="hero-photo" src="images/hero-dusk.jpg" width="864" height="1152" alt="Placeholder photograph of a dusk villa, to be replaced with a GN Architects project" class="h-[118%] w-[118%] max-w-none object-cover" />
           <svg class="pointer-events-none absolute inset-3 h-[calc(100%-1.5rem)] w-[calc(100%-1.5rem)]" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             <rect class="hero-line" x="1" y="1" width="98" height="98" />
@@ -88,10 +82,10 @@
           <article class="plate flex h-[100svh] w-screen shrink-0 flex-col justify-end px-4 pb-8 pt-28 md:px-8" data-cursor="View Project">
             <img src="images/villa-screen.jpg" width="1280" height="720" alt="Placeholder residential photograph" class="min-h-0 flex-1 object-cover" loading="lazy" />
             <div class="mt-4 flex items-end justify-between gap-6">
-              <p class="serif text-4xl md:text-6xl">Plate 01</p>
+              <p class="project-title">Plate 01</p>
               <div class="plate-meta text-right">
                 <p class="kicker">Residential</p>
-                <p class="mt-2 text-sm font-light">New Delhi · Architecture · —</p>
+                <p class="project-meta">New Delhi · Architecture</p>
                 <p class="mt-1 text-xs text-stone">Replace with a studio project</p>
               </div>
             </div>
@@ -99,10 +93,10 @@
           <article class="plate flex h-[100svh] w-screen shrink-0 flex-col justify-end px-4 pb-8 pt-28 md:px-8" data-cursor="View Project">
             <img src="images/villa-pool.jpg" width="1280" height="720" alt="Placeholder interior-exterior photograph" class="min-h-0 flex-1 object-cover" loading="lazy" />
             <div class="mt-4 flex items-end justify-between gap-6">
-              <p class="serif text-4xl md:text-6xl">Plate 02</p>
+              <p class="project-title">Plate 02</p>
               <div class="plate-meta text-right">
                 <p class="kicker">Interior</p>
-                <p class="mt-2 text-sm font-light">Delhi NCR · Interior · —</p>
+                <p class="project-meta">Delhi NCR · Interior</p>
                 <p class="mt-1 text-xs text-stone">Replace with a studio project</p>
               </div>
             </div>
@@ -110,10 +104,10 @@
           <article class="plate flex h-[100svh] w-screen shrink-0 flex-col justify-end px-4 pb-8 pt-28 md:px-8" data-cursor="View Project">
             <img src="images/villa-coast.jpg" width="1280" height="720" alt="Placeholder commercial photograph" class="min-h-0 flex-1 object-cover" loading="lazy" />
             <div class="mt-4 flex items-end justify-between gap-6">
-              <p class="serif text-4xl md:text-6xl">Plate 03</p>
+              <p class="project-title">Plate 03</p>
               <div class="plate-meta text-right">
                 <p class="kicker">Commercial</p>
-                <p class="mt-2 text-sm font-light">Delhi NCR · Architecture · —</p>
+                <p class="project-meta">Delhi NCR · Architecture</p>
                 <p class="mt-1 text-xs text-stone">Replace with a studio project</p>
               </div>
             </div>
@@ -121,10 +115,10 @@
           <article class="plate flex h-[100svh] w-screen shrink-0 flex-col justify-end px-4 pb-8 pt-28 md:px-8" data-cursor="Open Gallery">
             <img src="images/spread-stone.jpg" width="864" height="1152" alt="Placeholder material photograph" class="min-h-0 flex-1 object-cover" loading="lazy" />
             <div class="mt-4 flex items-end justify-between gap-6">
-              <p class="serif text-4xl md:text-6xl">Plate 04</p>
+              <p class="project-title">Plate 04</p>
               <div class="plate-meta text-right">
                 <p class="kicker">Material</p>
-                <p class="mt-2 text-sm font-light">New Delhi · Interior · —</p>
+                <p class="project-meta">New Delhi · Interior</p>
                 <p class="mt-1 text-xs text-stone">Replace with a studio project</p>
               </div>
             </div>
@@ -132,17 +126,17 @@
         </div>
       </section>
 
-      <section id="studio" class="relative grid gap-10 px-4 py-28 md:px-8 lg:grid-cols-12 lg:py-40">
+      <section id="studio" class="section relative grid gap-16 lg:grid-cols-12">
         <div id="rule" class="absolute bottom-24 left-4 top-16 hidden w-px bg-bronze md:left-8 lg:block"></div>
-        <blockquote class="serif text-[clamp(3rem,6.4vw,96px)] font-medium leading-[0.88] tracking-[-0.04em] lg:col-span-7 lg:pl-8" data-rise>Architecture begins where <em class="italic text-bronze">emotion</em> meets function.</blockquote>
+        <blockquote class="pull lg:col-span-8" data-rise>Architecture begins where emotion meets function.</blockquote>
         <div class="flex flex-col justify-end lg:col-span-4 lg:col-start-9">
           <p class="kicker text-stone" data-rise>The studio</p>
-          <p class="mt-6 text-[16px] font-light leading-[1.7]" data-rise>The practice was established in 2014 and was formerly known as Guru Nanak Architects. It works across residential architecture, interiors, commercial architecture, and planning in Delhi NCR.</p>
-          <p class="mt-5 text-[16px] font-light leading-[1.7] text-ink/70" data-rise>A plan is finished when the light, the material, and the way a person moves through the room agree.</p>
+          <p class="body" data-rise>The practice was established in 2014 and was formerly known as Guru Nanak Architects. It works across residential architecture, interiors, commercial architecture, and planning in Delhi NCR.</p>
+          <p class="body mt-8" data-rise>A plan is finished when the light, the material, and the way a person moves through the room agree.</p>
         </div>
       </section>
 
-      <section id="materials" class="px-4 pb-20 md:px-8">
+      <section id="materials" class="section">
         <div class="crop relative h-[72svh]" data-cursor="Explore">
           <img class="mat-shot absolute inset-0 h-full w-full object-cover" data-mat="concrete" src="images/mat-concrete.jpg" width="1280" height="720" alt="Placeholder concrete interior" style="opacity:1" />
           <img class="mat-shot absolute inset-0 h-full w-full object-cover" data-mat="marble" src="images/mat-marble.jpg" width="1280" height="720" alt="Placeholder marble interior" style="opacity:0" loading="lazy" />
@@ -154,39 +148,39 @@
           <div>
             <p class="kicker text-stone">Finishes</p>
             <ul class="mt-3 flex flex-wrap gap-x-6 gap-y-2">
-              <li><button class="mat-name is-on serif text-3xl text-ink md:text-5xl" data-mat="concrete">Concrete</button></li>
-              <li><button class="mat-name serif text-3xl text-stone md:text-5xl" data-mat="marble">Marble</button></li>
-              <li><button class="mat-name serif text-3xl text-stone md:text-5xl" data-mat="oak">Oak</button></li>
-              <li><button class="mat-name serif text-3xl text-stone md:text-5xl" data-mat="travertine">Travertine</button></li>
-              <li><button class="mat-name serif text-3xl text-stone md:text-5xl" data-mat="steel">Steel</button></li>
+              <li><button class="mat-name is-on project-title text-ink" data-mat="concrete">Concrete</button></li>
+              <li><button class="mat-name project-title text-stone" data-mat="marble">Marble</button></li>
+              <li><button class="mat-name project-title text-stone" data-mat="oak">Oak</button></li>
+              <li><button class="mat-name project-title text-stone" data-mat="travertine">Travertine</button></li>
+              <li><button class="mat-name project-title text-stone" data-mat="steel">Steel</button></li>
             </ul>
           </div>
-          <p id="mat-note" class="max-w-xs text-sm font-light leading-relaxed">Board-formed. The mould stays visible.</p>
+          <p id="mat-note" class="body">Board-formed. The mould stays visible.</p>
         </div>
       </section>
 
-      <section id="process" class="relative px-4 py-24 md:px-8 md:py-32">
+      <section id="process" class="section relative">
         <div id="spine" class="absolute bottom-20 left-6 top-28 w-px bg-bronze md:left-10"></div>
         <p class="kicker text-stone">Process</p>
-        <h2 class="serif mt-4 max-w-xl text-5xl leading-[0.92] md:text-7xl">Five marks, from the visit to the key.</h2>
+        <h2 class="section-title max-w-[12ch]">Five marks, from the visit to the key.</h2>
         <ol class="mt-16 max-w-4xl space-y-16 md:space-y-24">
-          <li class="stage grid items-center gap-6 md:grid-cols-[140px_1fr_88px]"><p class="kicker text-bronze">01 Sketch</p><div><h3 class="serif text-4xl">The first line.</h3><p class="mt-2 max-w-md text-sm font-light text-ink/70">The plot is walked. The brief is written in plain language.</p></div><svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path class="draw" d="M8 48 C24 16 30 18 56 22" /><path class="draw" d="M8 54 H52" stroke="#8b6b4a" /></svg></li>
-          <li class="stage grid items-center gap-6 md:grid-cols-[140px_1fr_88px] md:pl-10"><p class="kicker text-bronze">02 Concept</p><div><h3 class="serif text-4xl">A few plans.</h3><p class="mt-2 max-w-md text-sm font-light text-ink/70">Two or three ways the building can sit, tested in plan and section.</p></div><svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect class="draw" x="10" y="12" width="44" height="40" /><path class="draw" d="M10 32 H54 M32 12 V52" stroke="#8b6b4a" /></svg></li>
-          <li class="stage grid items-center gap-6 md:grid-cols-[140px_1fr_88px]"><p class="kicker text-bronze">03 Visualization</p><div><h3 class="serif text-4xl">Light, measured.</h3><p class="mt-2 max-w-md text-sm font-light text-ink/70">A model used to decide proportion, not to decorate the presentation.</p></div><svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path class="draw" d="M8 46 V22 H56 V46" /><path class="draw" d="M8 22 L32 8 L56 22" stroke="#8b6b4a" /></svg></li>
-          <li class="stage grid items-center gap-6 md:grid-cols-[140px_1fr_88px] md:pl-10"><p class="kicker text-bronze">04 Execution</p><div><h3 class="serif text-4xl">The site.</h3><p class="mt-2 max-w-md text-sm font-light text-ink/70">Drawings that can be built, reviewed while the work can still be corrected.</p></div><svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path class="draw" d="M10 16 H54 M10 32 H54 M10 48 H54" /><path class="draw" d="M24 10 V54 M40 10 V54" stroke="#8b6b4a" /></svg></li>
-          <li class="stage grid items-center gap-6 md:grid-cols-[140px_1fr_88px]"><p class="kicker text-bronze">05 Completion</p><div><h3 class="serif text-4xl">The key.</h3><p class="mt-2 max-w-md text-sm font-light text-ink/70">The last sample is checked. The room is handed over as it was drawn.</p></div><svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect class="draw" x="12" y="12" width="40" height="40" /><path class="draw" d="M22 34 L30 42 L46 24" stroke="#8b6b4a" /></svg></li>
+          <li class="stage grid items-center gap-6 md:grid-cols-[140px_1fr_88px]"><p class="kicker text-bronze">01 Sketch</p><div><h3>The first line.</h3><p class="body">The plot is walked. The brief is written in plain language.</p></div><svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path class="draw" d="M8 48 C24 16 30 18 56 22" /><path class="draw" d="M8 54 H52" stroke="#8b6b4a" /></svg></li>
+          <li class="stage grid items-center gap-6 md:grid-cols-[140px_1fr_88px] md:pl-10"><p class="kicker text-bronze">02 Concept</p><div><h3>A few plans.</h3><p class="body">Two or three ways the building can sit, tested in plan and section.</p></div><svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect class="draw" x="10" y="12" width="44" height="40" /><path class="draw" d="M10 32 H54 M32 12 V52" stroke="#8b6b4a" /></svg></li>
+          <li class="stage grid items-center gap-6 md:grid-cols-[140px_1fr_88px]"><p class="kicker text-bronze">03 Visualization</p><div><h3>Light, measured.</h3><p class="body">A model used to decide proportion, not to decorate the presentation.</p></div><svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path class="draw" d="M8 46 V22 H56 V46" /><path class="draw" d="M8 22 L32 8 L56 22" stroke="#8b6b4a" /></svg></li>
+          <li class="stage grid items-center gap-6 md:grid-cols-[140px_1fr_88px] md:pl-10"><p class="kicker text-bronze">04 Execution</p><div><h3>The site.</h3><p class="body">Drawings that can be built, reviewed while the work can still be corrected.</p></div><svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" aria-hidden="true"><path class="draw" d="M10 16 H54 M10 32 H54 M10 48 H54" /><path class="draw" d="M24 10 V54 M40 10 V54" stroke="#8b6b4a" /></svg></li>
+          <li class="stage grid items-center gap-6 md:grid-cols-[140px_1fr_88px]"><p class="kicker text-bronze">05 Completion</p><div><h3>The key.</h3><p class="body">The last sample is checked. The room is handed over as it was drawn.</p></div><svg class="h-16 w-16" viewBox="0 0 64 64" fill="none" aria-hidden="true"><rect class="draw" x="12" y="12" width="40" height="40" /><path class="draw" d="M22 34 L30 42 L46 24" stroke="#8b6b4a" /></svg></li>
         </ol>
       </section>
     </main>
-    <footer id="colophon" class="border-t border-ink/10 px-4 py-12 md:px-8">
+    <footer id="colophon" class="section border-t border-[#a6a29b]">
       <div class="grid gap-8 md:grid-cols-12">
         <div class="md:col-span-7">
           <p class="kicker text-stone">Title block</p>
-          <p class="serif mt-4 text-4xl leading-tight md:text-6xl">GN Architects</p>
-          <p class="mt-3 text-sm font-light leading-relaxed">Formerly Guru Nanak Architects<br />New Delhi<br />Established <span id="year">2014</span></p>
+          <p class="colophon-title">GN Architects</p>
+          <p class="body">Formerly Guru Nanak Architects<br />New Delhi<br />Established <span id="year">2014</span></p>
         </div>
         <div class="md:col-span-5 md:pt-8">
-          <p class="text-sm font-light leading-relaxed text-ink/70">Architecture, interiors, and planning. Project plates on this page are placeholder photographs and will be replaced with the studio’s own work. A street address, telephone, and email have not been added here.</p>
+          <p class="body">Architecture, interiors, and planning. Project plates on this page are photographs for placement and will be replaced with the studio’s own work.</p>
         </div>
       </div>
     </footer>
