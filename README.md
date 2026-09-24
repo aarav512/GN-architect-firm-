@@ -20,6 +20,6 @@ Open http://127.0.0.1:4317
 | Build command | `npm run build` |
 | Build output directory | `dist` |
 
-`npm run build` writes a compiled `dist/index.html` with bundled CSS and JavaScript. It also copies that build to the repository root so a static publish of the root still loads styles, scripts, fonts, and images.
+`npm run build` writes a compiled `dist/index.html` with bundled CSS and JavaScript. Image sources are relative (`images/hero-dusk.jpg`), and every referenced file is copied into `dist/images` before the build is accepted. The same files are copied to the repository root for a static publish.
 
 Framework preset: Vite. Do not set the output directory to the repository root if a build command is configured — use `dist`.
