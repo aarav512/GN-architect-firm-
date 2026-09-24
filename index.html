@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GN Architects — Spaces that feel timeless</title>
+    <meta
+      name="description"
+      content="GN Architects, formerly Guru Nanak Architects, is a Delhi studio for residences, interiors, and quiet commercial rooms. Est. 2014."
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-ivory text-ink antialiased">
+    <a href="#hero" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[120] focus:bg-ivory focus:px-3 focus:py-2">Skip to content</a>
+
+    <div id="loader" class="loader" aria-hidden="true">
+      <div class="text-center">
+        <p class="font-serif text-5xl tracking-wide">GN</p>
+        <p class="label mt-3 text-stone">Delhi · Est. 2014</p>
+        <div class="loader-line"><span></span></div>
+      </div>
+    </div>
+
+    <div id="cursor" class="cursor" aria-hidden="true">
+      <div class="cursor-ring"></div>
+      <div class="cursor-dot"></div>
+    </div>
+
+    <header class="pointer-events-none fixed inset-x-0 top-0 z-50 mix-blend-difference text-white">
+      <div class="pointer-events-auto flex items-center justify-between px-5 py-5 md:px-10">
+        <a href="#hero" data-scroll class="flex items-baseline gap-3">
+          <span class="font-serif text-[1.7rem] leading-none tracking-wide">GN</span>
+          <span class="label hidden text-white/80 sm:inline">Architects</span>
+        </a>
+        <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
+          <a class="nav-link" href="#work" data-scroll>Work</a>
+          <a class="nav-link" href="#studio" data-scroll>Studio</a>
+          <a class="nav-link" href="#practice" data-scroll>Practice</a>
+          <a class="nav-link" href="#contact" data-scroll>Contact</a>
+        </nav>
+        <a class="nav-link hidden md:inline" href="#contact" data-scroll>Book a consultation</a>
+        <button
+          id="menu-btn"
+          class="relative z-[80] flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+          aria-expanded="false"
+          aria-controls="menu"
+          aria-label="Open menu"
+        >
+          <span class="block h-px w-6 bg-current"></span>
+          <span class="block h-px w-6 bg-current"></span>
+        </button>
+      </div>
+    </header>
+
+    <div id="menu" class="fixed inset-0 z-[70] flex flex-col bg-ivory px-6 py-8 text-ink transition duration-500">
+      <div class="flex items-center justify-between">
+        <span class="font-serif text-3xl">GN</span>
+        <span class="label text-stone">Menu</span>
+      </div>
+      <nav class="mt-16 flex flex-1 flex-col justify-center gap-4" aria-label="Mobile">
+        <a class="font-serif text-6xl leading-none" href="#work" data-scroll>Work</a>
+        <a class="font-serif text-6xl leading-none" href="#studio" data-scroll>Studio</a>
+        <a class="font-serif text-6xl leading-none" href="#practice" data-scroll>Practice</a>
+        <a class="font-serif text-6xl leading-none" href="#process" data-scroll>Process</a>
+        <a class="font-serif text-6xl leading-none" href="#materials" data-scroll>Materials</a>
+        <a class="font-serif text-6xl leading-none" href="#contact" data-scroll>Contact</a>
+      </nav>
+      <p class="label text-stone">Delhi · Est. 2014</p>
+    </div>
+
+    <main>
+      <section id="hero" class="relative h-[100svh] overflow-hidden bg-ivory">
+        <div class="hero-visual absolute inset-0 lg:left-[46%]">
+          <img
+            id="hero-img"
+            src="/images/hero-residence.jpg"
+            alt="A limestone residence in morning light, designed with deep shade and a single tree"
+            class="h-full w-full object-cover"
+          />
+          <div class="hero-grid pointer-events-none absolute inset-0"></div>
+          <svg class="hero-lines pointer-events-none absolute inset-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <rect x="6" y="6" width="88" height="88" />
+            <line x1="6" y1="28" x2="94" y2="28" />
+            <line x1="6" y1="72" x2="94" y2="72" />
+            <line x1="34" y1="6" x2="34" y2="94" />
+            <line x1="66" y1="6" x2="66" y2="94" />
+            <path d="M6 6 L18 6 M6 6 L6 18 M94 6 L82 6 M94 6 L94 18 M6 94 L18 94 M6 94 L6 82 M94 94 L82 94 M94 94 L94 82" />
+          </svg>
+          <div class="pointer-events-none absolute bottom-8 right-6 hidden text-right text-ivory/80 md:block">
+            <p class="label">28.6139° N</p>
+            <p class="label mt-2">77.2090° E</p>
+          </div>
+          <svg class="pointer-events-none absolute right-6 top-24 hidden h-10 w-10 text-ivory/80 md:block" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="0.6" />
+            <path d="M20 6 V16 M20 24 V34 M20 8 L16 14 H24 Z" stroke="currentColor" stroke-width="0.7" fill="none" />
+          </svg>
+        </div>
+
+        <div class="hero-copy relative z-10 flex h-full w-full flex-col justify-between px-5 pb-10 pt-28 md:px-10 lg:w-[52%] lg:px-14 lg:pb-16">
+          <div class="hidden h-24 w-3 ruler lg:block" aria-hidden="true"></div>
+          <div class="max-w-xl bg-gradient-to-t from-ivory via-ivory/90 to-transparent pt-16 lg:bg-none lg:pt-0">
+            <p class="hero-fade label text-stone">Delhi · Est. 2014</p>
+            <h1 class="mt-6 font-serif text-[clamp(3.6rem,8.4vw,7.6rem)] leading-[0.86] tracking-[-0.03em] text-ink">
+              <span class="line block overflow-hidden"><span class="line-inner block">Spaces</span></span>
+              <span class="line block overflow-hidden"><span class="line-inner block">that feel</span></span>
+              <span class="line block overflow-hidden"><span class="line-inner block italic text-bronze">timeless.</span></span>
+            </h1>
+            <p class="hero-fade mt-8 max-w-sm text-[15px] font-light leading-relaxed text-ink/80">
+              GN Architects, formerly Guru Nanak Architects, shapes residences, interiors, and quiet commercial rooms. We design for light, material, and the long life of a building.
+            </p>
+            <a class="hero-fade text-link mt-8 text-ink" href="#work" data-scroll>
+              View Projects
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="drawing" class="relative h-[100svh] overflow-hidden bg-charcoal text-ivory">
+        <img
+          id="drawing-photo"
+          src="/images/project-villa.jpg"
+          alt="Nilaya House, a long limestone villa beside a still pool"
+          class="absolute inset-0 h-full w-full scale-105 object-cover opacity-0"
+        />
+        <div id="drawing-sheet" class="absolute inset-0 grid place-items-center">
+          <svg class="h-[78%] w-[90%] max-w-5xl" viewBox="0 0 1200 680" fill="none" aria-hidden="true">
+            <rect class="draw" x="40" y="30" width="1120" height="620" stroke="rgba(245,241,234,0.45)" />
+            <path class="draw" d="M120 470 H1080" stroke="#f5f1ea" />
+            <path class="draw" d="M180 470 V250 H620 V470" stroke="#f5f1ea" />
+            <path class="draw" d="M180 250 H1020 V390 H620" stroke="#f5f1ea" />
+            <path class="draw" d="M260 470 V320 H400 V470" stroke="#f5f1ea" />
+            <path class="draw" d="M470 470 V330 H580 V470" stroke="#f5f1ea" />
+            <path class="draw" d="M700 390 V250 M820 390 V250 M940 390 V280" stroke="#f5f1ea" />
+            <path class="draw" d="M180 520 H1040" stroke="#8b6b4a" />
+            <path class="draw" d="M220 545 H980" stroke="rgba(245,241,234,0.5)" />
+            <path class="draw" d="M300 250 V180 H520 V250" stroke="#f5f1ea" />
+            <path class="draw" d="M80 470 V500 M80 470 H140" stroke="rgba(245,241,234,0.6)" />
+            <path class="draw" d="M1120 80 H1040 M1120 80 V160" stroke="rgba(245,241,234,0.6)" />
+            <circle class="draw" cx="600" cy="600" r="28" stroke="#8b6b4a" />
+            <path class="draw" d="M600 578 V592 M600 586 L594 594 H606 Z" stroke="#8b6b4a" />
+          </svg>
+        </div>
+        <div class="pointer-events-none absolute left-6 top-24 md:left-12">
+          <p class="label text-stone">Sheet 01</p>
+          <p class="mt-3 font-serif text-3xl md:text-5xl">From drawing<br />to dwelling.</p>
+        </div>
+        <p id="drawing-caption" class="absolute bottom-10 left-6 opacity-0 md:left-12">
+          <span class="label text-ivory/70">Nilaya House · Chhatarpur</span>
+        </p>
+      </section>
+
+      <section id="work" class="relative bg-charcoal text-ivory">
+        <div class="pointer-events-none sticky top-24 z-20 h-0 px-5 md:px-10">
+          <p class="label text-ivory/70">Selected work</p>
+          <p id="work-index" class="mt-2 font-serif text-3xl">01 — 05</p>
+        </div>
+        <div id="work-track" class="work-track flex h-[100svh]">
+          <article class="panel group relative h-[100svh] w-screen shrink-0 overflow-hidden">
+            <img src="/images/project-villa.jpg" alt="Nilaya House, a limestone villa and reflecting pool" class="h-full w-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/25"></div>
+            <p class="pointer-events-none absolute -bottom-6 left-4 font-serif text-[22vw] leading-none text-white/10">01</p>
+            <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+            <div class="absolute inset-x-6 bottom-10 flex items-end justify-between gap-6 opacity-100 transition duration-500 lg:opacity-0 lg:group-hover:opacity-100">
+              <div>
+                <p class="label text-ivory/80">Villa</p>
+                <h2 class="mt-2 font-serif text-5xl md:text-7xl">Nilaya House</h2>
+              </div>
+              <div class="text-right">
+                <p class="label">Chhatarpur, Delhi</p>
+                <p class="mt-2 font-serif text-2xl">2024</p>
+              </div>
+            </div>
+          </article>
+          <article class="panel group relative h-[100svh] w-screen shrink-0 overflow-hidden">
+            <img src="/images/project-courtyard.jpg" alt="A private courtyard with a frangipani and a thin water rill" class="h-full w-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/25"></div>
+            <p class="pointer-events-none absolute -bottom-6 left-4 font-serif text-[22vw] leading-none text-white/10">02</p>
+            <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+            <div class="absolute inset-x-6 bottom-10 flex items-end justify-between gap-6 lg:opacity-0 lg:transition lg:duration-500 lg:group-hover:opacity-100">
+              <div>
+                <p class="label text-ivory/80">Residential</p>
+                <h2 class="mt-2 font-serif text-5xl md:text-7xl">House of Courtyards</h2>
+              </div>
+              <div class="text-right">
+                <p class="label">Vasant Vihar</p>
+                <p class="mt-2 font-serif text-2xl">2023</p>
+              </div>
+            </div>
+          </article>
+          <article class="panel group relative h-[100svh] w-screen shrink-0 overflow-hidden">
+            <img src="/images/project-interior.jpg" alt="A quiet living room in ivory plaster, linen, and walnut" class="h-full w-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/25"></div>
+            <p class="pointer-events-none absolute -bottom-6 left-4 font-serif text-[22vw] leading-none text-white/10">03</p>
+            <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+            <div class="absolute inset-x-6 bottom-10 flex items-end justify-between gap-6 lg:opacity-0 lg:transition lg:duration-500 lg:group-hover:opacity-100">
+              <div>
+                <p class="label text-ivory/80">Interior</p>
+                <h2 class="mt-2 font-serif text-5xl md:text-7xl">The Stone Room</h2>
+              </div>
+              <div class="text-right">
+                <p class="label">Defence Colony</p>
+                <p class="mt-2 font-serif text-2xl">2024</p>
+              </div>
+            </div>
+          </article>
+          <article class="panel group relative h-[100svh] w-screen shrink-0 overflow-hidden">
+            <img src="/images/project-kitchen.jpg" alt="A calm kitchen in warm grey, ivory, and black stone" class="h-full w-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/25"></div>
+            <p class="pointer-events-none absolute -bottom-6 left-4 font-serif text-[22vw] leading-none text-white/10">04</p>
+            <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+            <div class="absolute inset-x-6 bottom-10 flex items-end justify-between gap-6 lg:opacity-0 lg:transition lg:duration-500 lg:group-hover:opacity-100">
+              <div>
+                <p class="label text-ivory/80">Interior</p>
+                <h2 class="mt-2 font-serif text-5xl md:text-7xl">Saffron Kitchen</h2>
+              </div>
+              <div class="text-right">
+                <p class="label">Greater Kailash</p>
+                <p class="mt-2 font-serif text-2xl">2025</p>
+              </div>
+            </div>
+          </article>
+          <article class="panel group relative h-[100svh] w-screen shrink-0 overflow-hidden">
+            <img src="/images/project-apartments.jpg" alt="North Court, a mid-rise residence with timber fins and deep balconies" class="h-full w-full object-cover" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/25"></div>
+            <p class="pointer-events-none absolute -bottom-6 left-4 font-serif text-[22vw] leading-none text-white/10">05</p>
+            <span class="corner corner-tl"></span><span class="corner corner-tr"></span><span class="corner corner-bl"></span><span class="corner corner-br"></span>
+            <div class="absolute inset-x-6 bottom-10 flex items-end justify-between gap-6 lg:opacity-0 lg:transition lg:duration-500 lg:group-hover:opacity-100">
+              <div>
+                <p class="label text-ivory/80">Commercial</p>
+                <h2 class="mt-2 font-serif text-5xl md:text-7xl">North Court</h2>
+              </div>
+              <div class="text-right">
+                <p class="label">Gurugram</p>
+                <p class="mt-2 font-serif text-2xl">2022</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <div class="ticks" aria-hidden="true"></div>
+
+      <section id="studio" class="bg-ivory text-ink">
+        <div class="grid gap-16 px-5 py-28 md:px-12 lg:grid-cols-12 lg:py-40">
+          <div class="relative lg:col-span-7">
+            <div id="about-line" class="absolute bottom-0 left-0 top-0 w-px bg-bronze"></div>
+            <p class="label pl-8 text-stone" data-reveal>The studio</p>
+            <blockquote class="mt-8 pl-8 font-serif text-[clamp(2.7rem,5.6vw,5.8rem)] leading-[0.92] tracking-[-0.03em]" data-reveal>
+              Architecture begins where <em class="italic text-bronze">emotion</em> meets function.
+            </blockquote>
+          </div>
+          <div class="flex flex-col justify-end gap-8 lg:col-span-4 lg:col-start-9">
+            <p class="text-[17px] font-light leading-relaxed" data-reveal>
+              We began in 2014 as Guru Nanak Architects. The name is shorter now. The work is the same: rooms that stay calm when the day is not, plans that can be built, and materials chosen for how they age in Delhi light.
+            </p>
+            <p class="text-[17px] font-light leading-relaxed text-ink/75" data-reveal>
+              A house is a sequence. Arrival, shade, a court, a table, a window that knows the afternoon. We draw that sequence until it feels inevitable, then we stay close while it is made.
+            </p>
+            <p class="label text-bronze" data-reveal>Delhi NCR · Since 2014</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="practice" class="bg-charcoal text-ivory">
+        <div class="px-5 py-24 md:px-12 lg:py-32">
+          <div class="flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <p class="label text-stone" data-reveal>Practice</p>
+              <h2 class="mt-4 font-serif text-5xl leading-none md:text-7xl" data-reveal>Five drawings,<br />one practice.</h2>
+            </div>
+            <p class="max-w-xs text-sm font-light leading-relaxed text-stone" data-reveal>Open a sheet. Each panel unfolds the way a drawing does — line first, then the room.</p>
+          </div>
+          <div class="mt-16 border-t border-white/15">
+            <article class="service border-b border-white/15">
+              <h3>
+                <button class="flex w-full items-baseline gap-4 py-7 text-left md:gap-8" aria-expanded="false">
+                  <span class="w-12 font-serif text-2xl text-stone">01</span>
+                  <span class="flex-1 font-serif text-4xl md:text-6xl">Residential Architecture</span>
+                  <span class="mark font-serif text-3xl text-bronze" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="service-body">
+                <div>
+                  <div class="grid items-center gap-10 pb-10 md:grid-cols-2">
+                    <p class="max-w-md pl-16 text-sm font-light leading-relaxed text-ivory/80 md:pl-[5.5rem]">Houses and apartments planned around courts, cross-ventilation, and the way a family actually lives. From the first sketch to the last sample on site.</p>
+                    <svg viewBox="0 0 320 140" class="h-28 w-full" fill="none" aria-hidden="true">
+                      <rect class="mini-draw" x="10" y="20" width="180" height="100" stroke="#f5f1ea" />
+                      <path class="mini-draw" d="M40 20 V120 M90 20 V120 M140 70 H190" stroke="#f5f1ea" />
+                      <circle class="mini-draw" cx="250" cy="70" r="36" stroke="#8b6b4a" />
+                      <path class="mini-draw" d="M220 70 H280 M250 40 V100" stroke="#8b6b4a" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="service border-b border-white/15">
+              <h3>
+                <button class="flex w-full items-baseline gap-4 py-7 text-left md:gap-8" aria-expanded="false">
+                  <span class="w-12 font-serif text-2xl text-stone">02</span>
+                  <span class="flex-1 font-serif text-4xl md:text-6xl">Interior Design</span>
+                  <span class="mark font-serif text-3xl text-bronze" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="service-body">
+                <div>
+                  <div class="grid items-center gap-10 pb-10 md:grid-cols-2">
+                    <p class="max-w-md pl-16 text-sm font-light leading-relaxed text-ivory/80 md:pl-[5.5rem]">Furniture, light, and joinery drawn with the architecture, not after it. Kitchens, bedrooms, and rooms for gathering, edited until nothing is merely decorative.</p>
+                    <svg viewBox="0 0 320 140" class="h-28 w-full" fill="none" aria-hidden="true">
+                      <path class="mini-draw" d="M20 110 H300" stroke="#f5f1ea" />
+                      <rect class="mini-draw" x="40" y="60" width="90" height="50" stroke="#f5f1ea" />
+                      <rect class="mini-draw" x="150" y="40" width="70" height="70" stroke="#8b6b4a" />
+                      <path class="mini-draw" d="M240 110 V50 H290" stroke="#f5f1ea" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="service border-b border-white/15">
+              <h3>
+                <button class="flex w-full items-baseline gap-4 py-7 text-left md:gap-8" aria-expanded="false">
+                  <span class="w-12 font-serif text-2xl text-stone">03</span>
+                  <span class="flex-1 font-serif text-4xl md:text-6xl">Commercial Architecture</span>
+                  <span class="mark font-serif text-3xl text-bronze" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="service-body">
+                <div>
+                  <div class="grid items-center gap-10 pb-10 md:grid-cols-2">
+                    <p class="max-w-md pl-16 text-sm font-light leading-relaxed text-ivory/80 md:pl-[5.5rem]">Studios, galleries, and small workplaces that borrow the calm of a house. Clear plans, durable materials, and a public face that does not shout.</p>
+                    <svg viewBox="0 0 320 140" class="h-28 w-full" fill="none" aria-hidden="true">
+                      <path class="mini-draw" d="M30 120 V30 H290 V120" stroke="#f5f1ea" />
+                      <path class="mini-draw" d="M30 70 H290 M110 30 V120 M200 30 V120" stroke="#8b6b4a" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="service border-b border-white/15">
+              <h3>
+                <button class="flex w-full items-baseline gap-4 py-7 text-left md:gap-8" aria-expanded="false">
+                  <span class="w-12 font-serif text-2xl text-stone">04</span>
+                  <span class="flex-1 font-serif text-4xl md:text-6xl">Renovation</span>
+                  <span class="mark font-serif text-3xl text-bronze" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="service-body">
+                <div>
+                  <div class="grid items-center gap-10 pb-10 md:grid-cols-2">
+                    <p class="max-w-md pl-16 text-sm font-light leading-relaxed text-ivory/80 md:pl-[5.5rem]">Older Delhi houses, opened carefully. We keep what still works — a verandah, a good wall — and redraw the rest for light and present life.</p>
+                    <svg viewBox="0 0 320 140" class="h-28 w-full" fill="none" aria-hidden="true">
+                      <path class="mini-draw" d="M40 110 L40 40 L140 20 L240 40 V110 Z" stroke="#f5f1ea" />
+                      <path class="mini-draw" d="M150 110 V60 H210 V110" stroke="#8b6b4a" />
+                      <path class="mini-draw" d="M70 70 H110 M70 90 H110" stroke="#f5f1ea" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="service border-b border-white/15">
+              <h3>
+                <button class="flex w-full items-baseline gap-4 py-7 text-left md:gap-8" aria-expanded="false">
+                  <span class="w-12 font-serif text-2xl text-stone">05</span>
+                  <span class="flex-1 font-serif text-4xl md:text-6xl">Planning &amp; Consultation</span>
+                  <span class="mark font-serif text-3xl text-bronze" aria-hidden="true">+</span>
+                </button>
+              </h3>
+              <div class="service-body">
+                <div>
+                  <div class="grid items-center gap-10 pb-10 md:grid-cols-2">
+                    <p class="max-w-md pl-16 text-sm font-light leading-relaxed text-ivory/80 md:pl-[5.5rem]">Before a line is committed: site reading, brief, feasibility, and a clear sequence of decisions. Useful whether or not we go on to build.</p>
+                    <svg viewBox="0 0 320 140" class="h-28 w-full" fill="none" aria-hidden="true">
+                      <circle class="mini-draw" cx="70" cy="70" r="40" stroke="#f5f1ea" />
+                      <circle class="mini-draw" cx="160" cy="70" r="40" stroke="#8b6b4a" />
+                      <circle class="mini-draw" cx="250" cy="70" r="40" stroke="#f5f1ea" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="bg-ivory">
+        <div class="px-5 py-24 md:px-12 lg:py-32">
+          <p class="label text-stone" data-reveal>Process</p>
+          <h2 class="mt-4 max-w-3xl font-serif text-5xl leading-[0.95] md:text-7xl" data-reveal>A measured path from the first conversation to the site.</h2>
+          <ol class="relative mt-20 border-l border-bronze/40 pl-0">
+            <li class="step grid gap-6 border-b border-ink/10 py-10 md:grid-cols-12 md:items-center">
+              <div class="md:col-span-1"><span class="font-serif text-3xl text-bronze">01</span></div>
+              <div class="md:col-span-2">
+                <svg viewBox="0 0 80 80" class="h-16 w-16" fill="none" aria-hidden="true">
+                  <circle class="draw" cx="40" cy="40" r="26" stroke="#8b6b4a" />
+                  <path class="draw" d="M28 42 H52 M40 30 V52" stroke="#111" />
+                </svg>
+              </div>
+              <div class="md:col-span-4"><h3 class="font-serif text-4xl">Consultation</h3></div>
+              <p class="text-sm font-light leading-relaxed text-ink/70 md:col-span-5">We visit, listen, and write the brief in plain language: how you live, what the plot allows, what must endure.</p>
+            </li>
+            <li class="step grid gap-6 border-b border-ink/10 py-10 md:grid-cols-12 md:items-center">
+              <div class="md:col-span-1"><span class="font-serif text-3xl text-bronze">02</span></div>
+              <div class="md:col-span-2">
+                <svg viewBox="0 0 80 80" class="h-16 w-16" fill="none" aria-hidden="true">
+                  <path class="draw" d="M16 58 L34 22 L64 50" stroke="#111" />
+                  <path class="draw" d="M22 58 H66" stroke="#8b6b4a" />
+                </svg>
+              </div>
+              <div class="md:col-span-4"><h3 class="font-serif text-4xl">Concept Sketch</h3></div>
+              <p class="text-sm font-light leading-relaxed text-ink/70 md:col-span-5">A few plans, not twenty. The idea is tested in plan, section, and a handful of material notes.</p>
+            </li>
+            <li class="step grid gap-6 border-b border-ink/10 py-10 md:grid-cols-12 md:items-center">
+              <div class="md:col-span-1"><span class="font-serif text-3xl text-bronze">03</span></div>
+              <div class="md:col-span-2">
+                <svg viewBox="0 0 80 80" class="h-16 w-16" fill="none" aria-hidden="true">
+                  <rect class="draw" x="18" y="22" width="44" height="36" stroke="#111" />
+                  <path class="draw" d="M18 36 H62 M34 22 V58" stroke="#8b6b4a" />
+                </svg>
+              </div>
+              <div class="md:col-span-4"><h3 class="font-serif text-4xl">3D Visualization</h3></div>
+              <p class="text-sm font-light leading-relaxed text-ink/70 md:col-span-5">Models used to decide, not to impress. Light, proportion, and the feel of a room before it is priced.</p>
+            </li>
+            <li class="step grid gap-6 border-b border-ink/10 py-10 md:grid-cols-12 md:items-center">
+              <div class="md:col-span-1"><span class="font-serif text-3xl text-bronze">04</span></div>
+              <div class="md:col-span-2">
+                <svg viewBox="0 0 80 80" class="h-16 w-16" fill="none" aria-hidden="true">
+                  <path class="draw" d="M14 20 H66 M14 40 H66 M14 60 H66" stroke="#111" />
+                  <path class="draw" d="M28 14 V66 M52 14 V66" stroke="#8b6b4a" />
+                </svg>
+              </div>
+              <div class="md:col-span-4"><h3 class="font-serif text-4xl">Technical Planning</h3></div>
+              <p class="text-sm font-light leading-relaxed text-ink/70 md:col-span-5">Drawings a contractor can build from. Structure, services, joinery, and a schedule that respects the city.</p>
+            </li>
+            <li class="step grid gap-6 py-10 md:grid-cols-12 md:items-center">
+              <div class="md:col-span-1"><span class="font-serif text-3xl text-bronze">05</span></div>
+              <div class="md:col-span-2">
+                <svg viewBox="0 0 80 80" class="h-16 w-16" fill="none" aria-hidden="true">
+                  <path class="draw" d="M20 48 L34 60 L62 26" stroke="#8b6b4a" />
+                  <rect class="draw" x="16" y="16" width="48" height="48" stroke="#111" />
+                </svg>
+              </div>
+              <div class="md:col-span-4"><h3 class="font-serif text-4xl">Execution Support</h3></div>
+              <p class="text-sm font-light leading-relaxed text-ink/70 md:col-span-5">Site reviews, sample approvals, and the small corrections that keep the built work faithful to the drawing.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="materials" class="bg-ivory">
+        <div class="grid min-h-[100svh] lg:grid-cols-12">
+          <div class="flex flex-col justify-between px-5 py-20 md:px-12 lg:col-span-4 lg:py-28">
+            <div>
+              <p class="label text-stone">Material</p>
+              <h2 class="mt-4 font-serif text-5xl leading-none md:text-6xl">Choose a surface.</h2>
+            </div>
+            <ul class="my-12 space-y-3">
+              <li><button class="font-serif text-5xl text-ink md:text-6xl" data-material="marble" aria-pressed="true">Marble</button></li>
+              <li><button class="font-serif text-5xl text-stone md:text-6xl" data-material="wood" aria-pressed="false">Wood</button></li>
+              <li><button class="font-serif text-5xl text-stone md:text-6xl" data-material="concrete" aria-pressed="false">Concrete</button></li>
+              <li><button class="font-serif text-5xl text-stone md:text-6xl" data-material="metal" aria-pressed="false">Metal</button></li>
+            </ul>
+            <div>
+              <p id="material-spec" class="label text-bronze">Statuario. Honed. 20mm.</p>
+              <p id="material-note" class="mt-4 max-w-sm text-sm font-light leading-relaxed text-ink/70">A cool ground for warm plaster. We use it where the hand will rest — stairs, a bath ledge, a single table.</p>
+            </div>
+          </div>
+          <div class="relative min-h-[70svh] lg:col-span-8 lg:min-h-0">
+            <img class="material-shot absolute inset-0 h-full w-full object-cover" data-key="marble" src="/images/material-marble.jpg" alt="A sitting room lined in pale marble" style="opacity:1" />
+            <img class="material-shot absolute inset-0 h-full w-full object-cover" data-key="wood" src="/images/material-wood.jpg" alt="A reading room in fluted walnut" style="opacity:0" />
+            <img class="material-shot absolute inset-0 h-full w-full object-cover" data-key="concrete" src="/images/material-concrete.jpg" alt="A gallery-like room in warm board-formed concrete" style="opacity:0" />
+            <img class="material-shot absolute inset-0 h-full w-full object-cover" data-key="metal" src="/images/material-metal.jpg" alt="A dining space screened in brushed bronze" style="opacity:0" />
+          </div>
+        </div>
+      </section>
+
+      <section id="stats" class="border-y border-ink/10 bg-ivory">
+        <div class="grid md:grid-cols-3">
+          <div class="border-b border-ink/10 px-6 py-16 md:border-b-0 md:border-r md:px-10 md:py-24">
+            <p id="stat-projects" class="font-serif text-[clamp(4.5rem,8vw,7.5rem)] leading-none">0+</p>
+            <p class="label mt-4 text-stone">Projects</p>
+          </div>
+          <div class="border-b border-ink/10 px-6 py-16 md:border-b-0 md:border-r md:px-10 md:py-24">
+            <p id="stat-rating" class="font-serif text-[clamp(4.5rem,8vw,7.5rem)] leading-none">0.0★</p>
+            <p class="label mt-4 text-stone">Client rating</p>
+          </div>
+          <div class="px-6 py-16 md:px-10 md:py-24">
+            <p class="font-serif text-[clamp(3.2rem,6vw,5.5rem)] leading-[0.9]">Delhi<br />NCR</p>
+            <p class="label mt-4 text-stone">Based studio</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="voices" class="relative overflow-hidden bg-charcoal text-ivory">
+        <img src="/images/project-interior.jpg" alt="" class="absolute inset-0 h-full w-full scale-110 object-cover opacity-40 blur-md" />
+        <div class="absolute inset-0 bg-charcoal/55"></div>
+        <div class="relative px-5 py-24 md:px-12">
+          <p class="label text-ivory/70">Clients</p>
+          <h2 class="mt-4 font-serif text-5xl md:text-6xl">In their words.</h2>
+          <p class="mt-3 text-sm text-ivory/60">Drag sideways</p>
+          <div id="quote-viewport" class="mt-12 overflow-hidden">
+            <div id="quote-track" class="flex w-max gap-8 pr-10">
+              <figure class="quote-card">
+                <blockquote class="font-serif text-4xl leading-[1.05] md:text-5xl">“They drew the house the way we already lived in it. The court is where the day begins.”</blockquote>
+                <figcaption class="mt-8 label text-ivory/70">Meera A. · Nilaya House</figcaption>
+              </figure>
+              <figure class="quote-card">
+                <blockquote class="font-serif text-4xl leading-[1.05] md:text-5xl">“Nothing was added to impress a guest. Every surface has a job, and the rooms feel older than they are.”</blockquote>
+                <figcaption class="mt-8 label text-ivory/70">R. Khanna · The Stone Room</figcaption>
+              </figure>
+              <figure class="quote-card">
+                <blockquote class="font-serif text-4xl leading-[1.05] md:text-5xl">“The kitchen is the quietest room we have built. Guests stay, then they lower their voices.”</blockquote>
+                <figcaption class="mt-8 label text-ivory/70">Anika &amp; Dev · Saffron Kitchen</figcaption>
+              </figure>
+              <figure class="quote-card">
+                <blockquote class="font-serif text-4xl leading-[1.05] md:text-5xl">“A renovation that kept the verandah and gave us the light we had been borrowing from the lane.”</blockquote>
+                <figcaption class="mt-8 label text-ivory/70">S. Bedi · House of Courtyards</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-charcoal text-ivory">
+        <div class="grid lg:grid-cols-12">
+          <div class="px-5 py-24 md:px-12 lg:col-span-6 lg:py-32">
+            <p class="label text-stone">Consultation</p>
+            <h2 class="mt-6 font-serif text-[clamp(3.2rem,6vw,6rem)] leading-[0.9]">Let’s create something timeless.</h2>
+            <form id="consult" class="mt-12 max-w-md space-y-6" novalidate>
+              <label class="block">
+                <span class="label text-stone">Name</span>
+                <input class="field" name="name" type="text" autocomplete="name" placeholder="Your name" />
+                <span class="mt-1 block text-xs text-bronze" data-error="name"></span>
+              </label>
+              <label class="block">
+                <span class="label text-stone">Email</span>
+                <input class="field" name="email" type="email" autocomplete="email" placeholder="you@studio.com" />
+                <span class="mt-1 block text-xs text-bronze" data-error="email"></span>
+              </label>
+              <label class="block">
+                <span class="label text-stone">Project</span>
+                <select class="field" name="type">
+                  <option>Residential architecture</option>
+                  <option>Interior design</option>
+                  <option>Commercial architecture</option>
+                  <option>Renovation</option>
+                  <option>Planning &amp; consultation</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="label text-stone">Note</span>
+                <textarea class="field min-h-28 resize-y" name="message" placeholder="Site, scale, and what you hope the rooms will feel like."></textarea>
+                <span class="mt-1 block text-xs text-bronze" data-error="message"></span>
+              </label>
+              <button class="text-link text-ivory" type="submit">Request a conversation <span aria-hidden="true">→</span></button>
+            </form>
+            <p id="form-success" class="mt-12 max-w-md font-serif text-4xl leading-tight" hidden>
+              Thank you, <span></span>. We will write back within two working days.
+            </p>
+          </div>
+          <div id="map-sheet" class="relative min-h-[70svh] overflow-hidden border-t border-white/10 lg:col-span-6 lg:border-l lg:border-t-0">
+            <svg id="map-drawing" class="absolute inset-0 h-full w-full" viewBox="0 0 640 760" fill="none" role="img" aria-label="Schematic map of Delhi NCR with the studio marked">
+              <g stroke="rgba(245,241,234,0.18)" stroke-width="1">
+                <path d="M40 40 H600 M40 140 H600 M40 240 H600 M40 340 H600 M40 440 H600 M40 540 H600 M40 640 H600" />
+                <path d="M80 20 V720 M180 20 V720 M280 20 V720 M380 20 V720 M480 20 V720 M580 20 V720" />
+              </g>
+              <path d="M90 80 C180 160 160 280 240 360 C320 440 300 560 420 640" stroke="rgba(139,107,74,0.7)" stroke-width="1.2" fill="none" />
+              <circle cx="320" cy="360" r="150" stroke="rgba(245,241,234,0.25)" />
+              <circle cx="320" cy="360" r="86" stroke="rgba(245,241,234,0.2)" />
+              <text class="map-label" x="150" y="250">Vasant Vihar</text>
+              <text class="map-label" x="390" y="300">Defence Colony</text>
+              <text class="map-label" x="120" y="470">Mehrauli</text>
+              <text class="map-label" x="400" y="520">Gurugram</text>
+              <g id="studio-pin" class="map-pin" tabindex="0" role="button" aria-label="Studio location, East of Kailash">
+                <circle cx="338" cy="392" r="18" fill="none" stroke="#8b6b4a" />
+                <circle cx="338" cy="392" r="5" fill="#8b6b4a" />
+                <circle cx="338" cy="392" r="28" stroke="rgba(139,107,74,0.4)" />
+              </g>
+              <text class="map-spot map-label" data-place="Vasant Vihar" x="150" y="268">·</text>
+            </svg>
+            <div class="pointer-events-none absolute left-8 top-8">
+              <p class="label text-stone">Delhi NCR</p>
+              <p id="map-hover" class="mt-2 font-serif text-3xl">Studio</p>
+            </div>
+            <div id="address-card" class="absolute bottom-8 left-8 right-8 max-w-sm border border-white/15 bg-charcoal/85 p-6 transition duration-500">
+              <p class="label text-bronze">Visit by appointment</p>
+              <p class="mt-4 font-serif text-3xl leading-tight">GN Architects</p>
+              <p class="mt-3 text-sm font-light leading-relaxed text-ivory/80">
+                Formerly Guru Nanak Architects<br />
+                C-204, East of Kailash<br />
+                New Delhi 110065
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative overflow-hidden bg-charcoal text-ivory">
+      <div class="ticks opacity-60" aria-hidden="true"></div>
+      <div class="flex flex-wrap items-start justify-between gap-8 px-5 py-10 md:px-12">
+        <a class="text-sm font-light text-ivory/80" href="mailto:studio@gnarchitects.in">studio@gnarchitects.in</a>
+        <a class="text-sm font-light text-ivory/80" href="https://instagram.com/gn.architects" target="_blank" rel="noreferrer">Instagram</a>
+        <a class="text-sm font-light text-ivory/80" href="tel:+911141552014">+91 11 4155 2014</a>
+        <p class="text-sm font-light text-ivory/80">East of Kailash, New Delhi</p>
+      </div>
+      <p class="pointer-events-none select-none px-4 font-serif leading-[0.75] tracking-[-0.05em] text-ivory/[0.07] text-[28vw]">GN</p>
+      <div class="flex items-center justify-between px-5 pb-6 text-[11px] uppercase tracking-[0.22em] text-stone md:px-12">
+        <span>© 2026 GN Architects</span>
+        <span>Delhi</span>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
